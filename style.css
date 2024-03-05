@@ -46,7 +46,7 @@ body {
 header {
 
     background-color: var(--clr-primary);
-    padding: 1rem 6.125rem;
+    padding: 1rem 13.125rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -142,11 +142,12 @@ header p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 13.125rem;
+    gap: 48px;
+    padding: 0 6.125rem;
     height: 100vh;
     border-bottom: 1px solid rgba(26, 26, 26, 0.80);
 
-   
+   overflow: hidden;
     --color: #E1E1E1;
     background-size: 55px 55px;
     background-color: #F3F3F3;
@@ -185,7 +186,7 @@ header p {
 .main-text h2 {
     
     color: var(--clr-text);
-    font-size: 6.125em;
+    font-size: 6.125rem;
     font-weight: var(--fw-ExtraBold);
     letter-spacing: 2px;
 
@@ -195,10 +196,11 @@ header p {
 .main-text .Description {
 
     font-size: 24px;
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-light);
     color: var(--clr-text);
     margin-bottom: 100px;
     letter-spacing: 1px;
+    opacity: 0.80;
 }
 
 
@@ -210,12 +212,17 @@ header p {
     display: flex;
     align-items: center;
     gap:24px;
+
     background-color: var(--clr-buttoncolor);
     color: var(--clr-light);
     border: none;
     border-radius: 8px;
+    
     padding: 1.5rem 3rem;
+
     font-size: 1.2rem;
+
+
     font-family: 'League Spartan', sans-serif;
     font-weight: var(--fw-semibold);
     cursor: pointer;
@@ -329,9 +336,9 @@ header p {
  
 
     
-    display: flex;
-    justify-content: space-between;
-    gap:100px;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
      
     padding: 10em 6.125rem;
     width: 100%;
@@ -375,13 +382,6 @@ header p {
 
 
 
-.present-skills {
-    width: 700px;
-
- 
- 
-}
-
 
 .present-content h1{
     margin: 0;
@@ -406,12 +406,10 @@ header p {
 
 
 .skills-image {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
+    display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     
-
 }
 
 .skills-content h1 {
@@ -539,15 +537,19 @@ height: 48px;
 
  /* for mobile devices */
  
- @media screen and (max-width: 375px) {
+ @media screen and (min-width: 375px) and (max-width: 767px) {
 
+    .site-header {
+        padding: 1rem 2rem;
+      
+    }
 
- 
+    .main-home {
+        padding: 5rem 1.5rem;
+        height: auto;
+        flex-direction: column;
+    }
 
-    
- 
- 
-   
  
      .nav_list {
     
@@ -599,12 +601,23 @@ height: 48px;
  
   /* for tablet */
  
- @media screen and (max-width: 768px) {
+  @media screen and (min-width: 1px) and (max-width: 1300px) {
 
 
+    
         .site-header {
-             padding: 1rem 3rem;
+            padding: 1rem 2rem;
+          
+        
         }
+
+
+        .second-home {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 24px;
+        }
+
 
         .main-text {
             margin-top: 50px;
@@ -666,6 +679,7 @@ height: 48px;
 
         .present-skills {
             text-align: center;
+            margin-top: 48px;
         }
 
         .skills-image {
@@ -752,25 +766,6 @@ height: 48px;
 
 
 
-
- @media screen and (max-width: 1600px) { 
-
-
-    
-    .site-header {
-        padding: 1rem 6.125rem;
-   }
-    .main-home {
-        padding: 5rem 6.125rem;
-    }
-
-
-
-
-
-
- }
- 
 
 
 
