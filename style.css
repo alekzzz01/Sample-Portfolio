@@ -460,14 +460,14 @@ height: 48px;
 
 .third-home {
 
-
-    display: flex;
-    justify-content: space-between;
-
-    
+      
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
     padding: 10em 6.125rem;
-    width: 100%;
+   
     border-bottom: 1px solid rgba(26, 26, 26, 0.80);
+    overflow: hidden;
 
 }
 
@@ -476,7 +476,7 @@ height: 48px;
 
 .thirdmain-text h1{
 
-    font-size: 3.075em;
+    font-size: 3.075rem;
     letter-spacing: 6.4px;
     padding: 0;
     margin: 0;
@@ -493,6 +493,11 @@ height: 48px;
     transition: opacity 0.3s;
 }
 
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
 
 
 .carousel img:hover {
@@ -611,12 +616,39 @@ height: 48px;
         
         }
 
+        .main-text h3 {
+            font-size: 3.075em;
+        }
+
+        .main-text h2 {
+    
+            color: var(--clr-text);
+            font-size: 3.125rem;
+            font-weight: var(--fw-ExtraBold);
+            letter-spacing: 2px;
+        
+        }
+        
+
+    
+
 
         .second-home {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             gap: 24px;
         }
+
+        .third-home {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 24px;
+        }
+
+        .third-home h1 {
+            font-size: 2.075rem;
+        }
+
 
 
         .main-text {
